@@ -1,7 +1,9 @@
 {
   "dependencies": {
     "ffmpeg": "^0.0.4",
-    "progress-stream": "^2.0.0",
+    "image-downloader": "^4.0.2",
+    "node-id3": "^0.2.2",
+    "tiny-async-pool": "^1.2.0",
     "ytdl-core": "^4.4.5",
     "ytpl": "^2.0.5"
   }
