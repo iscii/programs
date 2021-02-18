@@ -94,6 +94,5 @@ async function downloadMusic(playlist) {
     })
     await asyncPool(1, pl.items, download);
     //* it fsr only downloads 209 when there should be 213. do a count or smtn?
-    //fix the output names (replace "_" w " ") before editing metadata;
 }
 downloadMusic("https://www.youtube.com/playlist?list=PLGzwBHV9xpJPMmrbMHOm9q9Pt-huRmx8W");
