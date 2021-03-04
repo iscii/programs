@@ -17,7 +17,9 @@ async function downloadMusic(playlist) {
 
     //get playlist
     const pl = await ytpl(playlist, { pages: "Infinity" });
+    console.log(pl.items);
 
+    //create directories
     let af = "./music";
     let mf = `./music_medium`;
 
@@ -28,6 +30,7 @@ async function downloadMusic(playlist) {
         fs.mkdirSync(mf);
     }
 
+    //download function
     const download = item => new Promise(async resolve => {
         i++;
         console.log(`${i}, ${item.title}`);
@@ -92,7 +95,9 @@ async function downloadMusic(playlist) {
                 console.log(error);
             })
     })
-    await asyncPool(1, pl.items, download);
-    //* it fsr only downloads 209 when there should be 213. do a count or smtn?
+
+    //promise pool for limiting parallel downloads
+    await asyncPool(3, pl.items, download);
 }
+
 downloadMusic("https://www.youtube.com/playlist?list=PLGzwBHV9xpJPMmrbMHOm9q9Pt-huRmx8W");
