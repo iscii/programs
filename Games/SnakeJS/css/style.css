@@ -1,0 +1,33 @@
+body {
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#therealbody{
+    height: calc(80vh+17px);
+    width: calc(80vh+17px);
+    margin-right: 50%;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+    background-color:black;
+}
+
+.box{
+    height: calc(80vh / 15);
+    width: calc(80vh / 15);
+    display: inline-block;
+    background-color: black;
+    border: 1px solid rgb(114, 114, 114);
+}
+
+.occ{
+    background-color: red;
+}
+
+.apple{
+    background-color: green;
+}
